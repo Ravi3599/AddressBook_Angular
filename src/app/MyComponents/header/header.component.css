@@ -26,6 +26,7 @@
     flex-direction: row;
     align-items: center;
     width: 80%;
+    margin-left: 150px;
   }
   
   .addressBook-text {
@@ -57,5 +58,6 @@
     cursor: pointer;
   }
   .button{
-    margin-left: 624px;
+    display: flex;
+    margin-right: 150px;
   }

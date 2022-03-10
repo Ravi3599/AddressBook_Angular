@@ -10,6 +10,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(private router:Router) { }
 
+  title:string="Person Details";
+  
   ngOnInit(): void {
   }
   onForm(){

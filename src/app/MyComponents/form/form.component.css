@@ -42,8 +42,7 @@
   .form-head-image{
     padding-right: 35px;
   }
-  
-  /* UC 3 */
+
   
   .row-content {
     margin-left: 30px;
@@ -120,10 +119,10 @@
   }
   
   .zipcode {
-    padding: 15px 12px;
+    padding: 11px 12px;
   }
   
-  error-output {
+  .error {
     margin-left: 10px;
     font-size: 14px;
     font-style: italic;
@@ -154,13 +153,18 @@
   .button-submit {
     margin-right: 50px;
   }
-  
+  .button-cancel {
+    margin-right: 50px;
+  }
   .button:hover {
     box-shadow: 0px 8px 15px rgba(77, 74, 74, 0.3);
   }
-  
+  .button-cancel:hover{
+    background-color: #da971d;
+    color: black;
+  }
   .button-submit:hover{
-    background-color: #008cff;
+    background-color: #708fb8;
     color: black;
   }
   
@@ -168,7 +172,14 @@
     background-color: rgb(223, 0, 0);
     color: black;
   }
-  
+  button:disabled,
+  button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  opacity: 0.3;
+}
+
   @media only screen and (max-width:900px) {
     .column-constrains {
       display: flex;

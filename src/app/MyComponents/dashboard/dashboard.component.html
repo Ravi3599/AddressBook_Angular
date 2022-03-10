@@ -1,8 +1,8 @@
 <div class="main-content">
     <div class="main-header-content">
         <div class="addressbook-detail-text">
-            Person Details
-            <div class="contact-count"></div>
+           {{title}}
+            <div class="contact-count">10</div>
         </div>
         <button (click)="onForm()" class="add-button">
             <img src="../../assets/icons/plus_symbol.svg" alt="">Add Person
@@ -12,7 +12,31 @@
 <div class="main-content">
     <div class="table-main">
         <table id="table-display" class="table">
+            <tr>
+                <!--Table header-->
+                <th>Fullname</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
 
+            </tr>
+            <tr>
+                <td>Ravi</td>
+                <td>Sharada Nagar,Latur</td>
+                <td>Latur</td>
+                <td>Maharashtra</td>
+                <td>413512</td>
+                <td>0123654987</td>
+        
+                <!--To update and delete an employee from the database-->
+                <td> 
+                    <img src="../../assets/icons/delete.svg" alt="delete">
+                    <img src="../../assets/icons/edit.svg" alt="edit">
+                </td>
+        </tr>
         </table>
     </div>
 </div>

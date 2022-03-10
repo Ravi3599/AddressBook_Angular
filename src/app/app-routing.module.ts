@@ -4,7 +4,7 @@ import { DashboardComponent } from './MyComponents/dashboard/dashboard.component
 import { FormComponent } from './MyComponents/form/form.component';
 
 const routes: Routes = [
-  {path:'/' ,redirectTo:'dashboard', pathMatch:'full'},
+  {path:'' ,redirectTo:'/dashboard', pathMatch:'full'},
   {path:"dashboard", component:DashboardComponent},
   {path:"form",component:FormComponent},
   {path:"**", component:DashboardComponent}
