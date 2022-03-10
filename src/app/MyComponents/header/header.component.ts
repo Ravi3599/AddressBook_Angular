@@ -12,6 +12,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onInfo(){
+    this.router.navigate(["info"]);
+  }
   onDashboard(){
     this.router.navigate(["dashboard"]);
   }
