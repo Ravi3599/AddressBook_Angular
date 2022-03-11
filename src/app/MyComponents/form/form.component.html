@@ -7,11 +7,25 @@
       </div>
       <div class="form-constrains">
         <div class="row-content">
-          <label for="name" class="label text">Full Name</label>
+          <label for="firstName" class="label text">FirstName</label>
           <br>
-          <input type="text" class="input" pattern="^[a-zA-Z]{4,}$" id="name" #name="ngModel" name="name" placeholder="Your name.." autocomplete="off" required [(ngModel)]="addressbook.name">
-          <span class="error" *ngIf="name.errors?.['pattern']"><h6>Name is Invalid and should be more than 3 characters long</h6></span> 
-          <span class="error" *ngIf="name.errors?.['required'] && name.touched"><h6>Name is Required</h6></span>
+          <input type="text" class="input" pattern="^[a-zA-Z]{4,}$" id="firstName" #firstName="ngModel" name="firstName" placeholder="Your first name.." autocomplete="off" required [(ngModel)]="addressbook.firstName">
+          <span class="error" *ngIf="firstName.errors?.['pattern']"><h6>First Name is Invalid and should be more than 3 characters long</h6></span> 
+          <span class="error" *ngIf="firstName.errors?.['required'] && firstName.touched"><h6> First Name is Required</h6></span>
+        </div>
+        <div class="row-content">
+          <label for="lastName" class="label text">LastName</label>
+          <br>
+          <input type="text" class="input" pattern="^[a-zA-Z]{4,}$" id="lastName" #lastName="ngModel" name="lastName" placeholder="Your last name.." autocomplete="off" required [(ngModel)]="addressbook.lastName">
+          <span class="error" *ngIf="lastName.errors?.['pattern']"><h6>Last Name is Invalid and should be more than 3 characters long</h6></span> 
+          <span class="error" *ngIf="lastName.errors?.['required'] && lastName.touched"><h6>Last Name is Required</h6></span>
+        </div>
+        <div class="row-content">
+          <label for="email" class="label text">Email</label>
+          <br>
+          <input type="text" class="input" email id="email" #email="ngModel" name="email" placeholder="Your Email Id..." autocomplete="off" required [(ngModel)]="addressbook.email">
+          <span class="error" *ngIf="email.errors?.['email']"><h6>Email is Invalid </h6></span> 
+          <span class="error" *ngIf="email.errors?.['required'] && email.touched"><h6>Email is Required</h6></span>
         </div>
         <div class="row-content">
           <label for="phoneNumber" class="label text">Phone Number</label>
@@ -105,7 +119,8 @@
         </div>
         <div class="buttons-contact">
           <button type="button" class="button button-cancel" id="cancelButton" (click)="onDashboard()">Cancel</button>
-          <button type="submit" class="button button-submit" id="submitButton" [disabled]="!myForm.valid || cityHasError || stateHasError" (click)="onAddContact()">Add</button>
+          <button type="button" class="button button-submit" id="submitButton" [disabled]="!myForm.valid || cityHasError || stateHasError" (click)="onAddContact()" *ngIf="this.Id ==null">Add</button>
+          <button type="button" class="button button-submit" id="submitButton" [disabled]="!myForm.valid || cityHasError || stateHasError" (click)="onUpdateContact()" *ngIf="this.Id !=null">Update</button>
           <button type="reset" class="button button-reset" id="resetButton" >Reset</button>
         </div>
       </div>

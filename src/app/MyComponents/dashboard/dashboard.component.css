@@ -113,3 +113,8 @@
     cursor: pointer;
     padding-right: 30px;  
   }
+  .btn{
+    margin-left: 4px;
+    font-size: small;
+    width: 50px;
+  }

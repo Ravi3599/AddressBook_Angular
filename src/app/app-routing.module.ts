@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:"info",component:InfoComponent,children:[
     {path:"developer",component:DeveloperdetailsComponent}
   ]},
+  {path:"update/:Id",component:FormComponent},
   {path:"**", component:DashboardComponent}
 ];
 

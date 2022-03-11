@@ -2,7 +2,7 @@
     <div class="main-header-content">
         <div class="addressbook-detail-text">
            {{title}}
-            <div class="contact-count">10</div>
+            <div class="contact-count"></div>
         </div>
         <button (click)="onForm()" class="add-button">
             <img src="../../assets/icons/plus_symbol.svg" alt="">Add Person
@@ -14,7 +14,9 @@
         <table id="table-display" class="table">
             <tr>
                 <!--Table header-->
-                <th>Fullname</th>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
                 <th>Address</th>
                 <th>City</th>
                 <th>State</th>
@@ -23,18 +25,20 @@
                 <th>Actions</th>
 
             </tr>
-            <tr>
-                <td>Ravi</td>
-                <td>Sharada Nagar,Latur</td>
-                <td>Latur</td>
-                <td>Maharashtra</td>
-                <td>413512</td>
-                <td>0123654987</td>
+            <tr *ngFor="let adbook of addressbook.data">
+                <td>{{adbook.id}}</td>
+                <td>{{adbook.firstName | uppercase}}</td>
+                <td>{{adbook.lastName | uppercase}}</td>
+                <td>{{adbook.address}}</td>
+                <td>{{adbook.city}}</td>
+                <td>{{adbook.state}}</td>
+                <td>{{adbook.zip}}</td>
+                <td>{{adbook.phoneNumber}}</td>
         
                 <!--To update and delete an employee from the database-->
                 <td> 
-                    <img src="../../assets/icons/delete.svg" alt="delete">
-                    <img src="../../assets/icons/edit.svg" alt="edit">
+                   <button type="button" name="delete"  class="btn btn-outline-danger" (click)="deleteAddressRecord(adbook.id)"><img src="../../assets/icons/delete.svg" alt="delete">Delete</button> 
+                   <button type="button" name="edit"  class="btn btn-outline-success" (click)="editAddressRecord(adbook.id)"><img src="../../assets/icons/edit.svg" alt="edit">Edit</button> 
                 </td>
         </tr>
         </table>

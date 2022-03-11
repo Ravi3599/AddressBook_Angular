@@ -7,10 +7,21 @@ import { AddressBook } from './Model/AddressBook';
 })
 export class AddressbookService {
 
-  _url="";
   constructor(private _http:HttpClient) { }
 
-  enroll(addressbook:AddressBook){
-    return this._http.post<any>(this._url,addressbook);
+  insertAddressBook(addressbook:any){
+    return this._http.post("http://localhost:8080/addressbookservice/insert",addressbook);
+  }
+  getAddressBook(){
+    return this._http.get("http://localhost:8080/addressbookservice/retrieve");
+  }
+  getAddressBookById(Id:number){
+    return this._http.get("http://localhost:8080/addressbookservice/get/"+Id);
+  }
+  updateAddressBookById(Id:number,addressbook:any){
+    return this._http.put("http://localhost:8080/addressbookservice/update/"+Id,addressbook);
+  }
+  deleteAddressBookById(Id:number){
+    return this._http.delete("http://localhost:8080/addressbookservice/delete/"+Id);
   }
 }
