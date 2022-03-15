@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="26px" viewBox="0 0 21 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>notes</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Outline" transform="translate(-52.000000, -400.000000)" stroke="#000000">
+            <g id="notes" transform="translate(52.000000, 400.000000)">
+                <path d="M19.5,24.5012 L1.5,24.5012 C0.95,24.5012 0.5,24.0512 0.5,23.5012 L0.5,3.5012 C0.5,2.9512 0.95,2.5012 1.5,2.5012 L19.5,2.5012 C20.05,2.5012 20.5,2.9512 20.5,3.5012 L20.5,23.5012 C20.5,24.0512 20.05,24.5012 19.5,24.5012 Z" id="Stroke-1"></path>
+                <path d="M10.5,0.5012 L10.5,4.5012" id="Stroke-3"></path>
+                <path d="M7.5,0.5012 L7.5,4.5012" id="Stroke-5"></path>
+                <path d="M4.5,0.5012 L4.5,4.5012" id="Stroke-7"></path>
+                <path d="M16.5,0.5012 L16.5,4.5012" id="Stroke-9"></path>
+                <path d="M13.5,0.5012 L13.5,4.5012" id="Stroke-11"></path>
+                <polyline id="Stroke-13" points="16.5 24.5012 16.5 20.5012 20.5 20.5012"></polyline>
+                <path d="M4.5,9.5012 L16.5,9.5012" id="Stroke-15"></path>
+                <path d="M4.5,11.5012 L10.5,11.5012" id="Stroke-17"></path>
+                <path d="M4.5,13.5012 L14.5,13.5012" id="Stroke-19"></path>
+                <path d="M4.5,15.5012 L12.5,15.5012" id="Stroke-21"></path>
+                <path d="M4.5,17.5012 L14.5,17.5012" id="Stroke-23"></path>
+            </g>
+        </g>
+    </g>
+</svg>

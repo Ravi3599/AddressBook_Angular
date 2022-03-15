@@ -1,15 +1,15 @@
 <header class="header-content header">
-    <div class="logo-content" (click)="onDashboard()">
-        <img src="../../assets/images/logo.jpeg" alt="logo" />
-        <div>
+    <div class="logo-content" >
+        <img src="../../assets/images/logo.jpeg" alt="logo" class="image" (click)="onDashboard()"/>
+        <div (click)="onDashboard()">
             <span class="addressBook-text">Address</span><br />
             <span class="addressBook-text addressBook-book">Book</span>
         </div>
     </div>
     <div class="button">
-        <button type="button" class="btn btn-success" (click)="onInfo()">Info</button>
-        <button type="button" class="btn btn-success" (click)="onDashboard()">Dashboard</button>
-        <button type="button" class="btn btn-success" (click)="onForm()">Form</button>
+        <button type="button" class="btn button-42" (click)="onInfo()">Info</button>
+        <button type="button" class="btn button-42" (click)="onDashboard()">Dashboard</button>
+        <button type="button" class="btn button-42" (click)="onForm()">Form</button>
  </div>
 </header>
 <router-outlet></router-outlet>

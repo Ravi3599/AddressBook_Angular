@@ -1,0 +1,23 @@
+<div class="main-container">
+    <div class="sub-container">
+        <div class="heading">
+            <h5>Address Book Detail For ID=>{{addressbook.id}}</h5>
+        </div>
+        <div class="container">
+            <ul>
+                <li class=""><b>First Name  : </b>{{addressbook.firstName}}</li>
+                <li class=""><b>Last Name   :</b>{{addressbook.lastName}}</li>
+                <li class=""><b>Address     :</b>{{addressbook.address}}</li>
+                <li class=""><b>City        :</b>{{addressbook.city}}</li>
+                <li class=""><b>State       :</b>{{addressbook.state}}</li>
+                <li class=""><b>Zip         :</b>{{addressbook.zip}}</li>
+                <li class=""><b>Phone Number:</b>{{addressbook.phoneNumber}}</li>
+
+            </ul>
+        </div>
+        <button type="button"  class="button-62 back" (click)="onBack()">Back</button>
+        <button type="button"  class="button-62 edit" (click)="editRecord()">Edit</button>
+    </div>
+
+</div>
+    

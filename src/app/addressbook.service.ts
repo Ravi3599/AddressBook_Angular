@@ -24,4 +24,23 @@ export class AddressbookService {
   deleteAddressBookById(Id:number){
     return this._http.delete("http://localhost:8080/addressbookservice/delete/"+Id);
   }
+  searchByFirstName(firstName:any){
+    return this._http.get("http://localhost:8080/addressbookservice/getByFirstName/"+firstName)
+  }
+  searchByCity(city:any){
+    return this._http.get("http://localhost:8080/addressbookservice/getByCity/"+city)
+  }
+  searchByPhoneNumber(number:any){
+    return this._http.get("http://localhost:8080/addressbookservice/getByPhoneNumber/"+number)
+  }
+  sortByCityAsc(){
+    return this._http.get("http://localhost:8080/addressbookservice/sortByCityAsc");
+  }
+  sortByCityDesc(){
+    return this._http.get("http://localhost:8080/addressbookservice/sortByCityDesc");
+  }
+  sortByFirstNameAsc(){
+    return this._http.get("http://localhost:8080/addressbookservice/sortByFirstNameAsc");
+  }
+
 }

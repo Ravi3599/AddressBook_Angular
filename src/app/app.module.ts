@@ -10,6 +10,8 @@ import { DeveloperdetailsComponent } from './MyComponents/developerdetails/devel
 import { FormComponent } from './MyComponents/form/form.component';
 import { HeaderComponent } from './MyComponents/header/header.component';
 import { InfoComponent } from './MyComponents/info/info.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AddressdetailsComponent } from './MyComponents/addressdetails/addressdetails.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,16 @@ import { InfoComponent } from './MyComponents/info/info.component';
     DashboardComponent,
     FormComponent,
     InfoComponent,
-    DeveloperdetailsComponent
+    DeveloperdetailsComponent,
+    AddressdetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

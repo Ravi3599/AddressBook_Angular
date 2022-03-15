@@ -2,13 +2,40 @@
     <div class="main-header-content">
         <div class="addressbook-detail-text">
            {{title}}
-            <div class="contact-count"></div>
+            <div class="contact-count">{{addressbook.data.length}}</div>
         </div>
-        <button (click)="onForm()" class="add-button">
+        <div class="form-group">
+            <input type="text" class="form-control searchInput" name="firstName" [(ngModel)]="name" placeholder="Search Here..." >
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle search button-62" type="button" data-toggle="dropdown">Search By
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a (click)="searchByFirstName()">By First Name</a></li>
+              <li><a (click)="searchByCity()">By City </a></li>
+              <li><a (click)="searchByPhoneNumber()">By Mobile Number</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle button-62" type="button" data-toggle="dropdown">Sort By
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a (click)="sortByCityAsc()">By City Asc</a></li>
+              <li><a (click)="sortByCityDesc()">By City Desc </a></li>
+              <li><a (click)="sortByFirstNameAsc()">By FirstName Asc</a></li>
+            </ul>
+          </div>
+        <!-- <div class="form-group">
+            <button type="button" class="button-62 search" (click)="search()">Search</button>
+            <button type="button" class="button-62" (click)="sort()">Sort</button>
+
+        </div> -->
+        <button (click)="onForm()" class="button-73">
             <img src="../../assets/icons/plus_symbol.svg" alt="">Add Person
         </button>
     </div>
 </div>
+
 <div class="main-content">
     <div class="table-main">
         <table id="table-display" class="table">
@@ -27,7 +54,7 @@
             </tr>
             <tr *ngFor="let adbook of addressbook.data">
                 <td>{{adbook.id}}</td>
-                <td>{{adbook.firstName | uppercase}}</td>
+                <td>{{adbook.firstName}}</td>
                 <td>{{adbook.lastName | uppercase}}</td>
                 <td>{{adbook.address}}</td>
                 <td>{{adbook.city}}</td>
@@ -37,8 +64,9 @@
         
                 <!--To update and delete an employee from the database-->
                 <td> 
-                   <button type="button" name="delete"  class="btn btn-outline-danger" (click)="deleteAddressRecord(adbook.id)"><img src="../../assets/icons/delete.svg" alt="delete">Delete</button> 
-                   <button type="button" name="edit"  class="btn btn-outline-success" (click)="editAddressRecord(adbook.id)"><img src="../../assets/icons/edit.svg" alt="edit">Edit</button> 
+                   <img src="../../assets/icons/delete.svg" alt="delete" (click)="deleteAddressRecord(adbook.id)">
+                   <img src="../../assets/icons/edit.svg" alt="edit" (click)="editAddressRecord(adbook.id)">
+                   <img src="../../assets/icons/edit.svg" alt="view" (click)="viewAddressRecord(adbook.id)">
                 </td>
         </tr>
         </table>
