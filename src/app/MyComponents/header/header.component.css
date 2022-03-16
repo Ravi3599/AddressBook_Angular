@@ -45,7 +45,7 @@
   .addressBook-book {
     color: #42515f;
   }
-  .btn {
+  /* .btn {
     font: normal normal normal 22px/29px Roboto;
     background-color: #82A70C;
     border: none;
@@ -59,19 +59,20 @@
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-  }
+  } */
   .button{
     display: flex;
     margin-right: 150px;
     width: 800px;
+    text-decoration: underline;
   }
 
 .button-42 {
-  background-color: #42515f;
+  background-color: #ffffff 0% 0% no-repeat padding-box;;
   /* background-image: linear-gradient(-180deg, #e0cc12, #975c34); */
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-  color: #FFFFFF;
+  color: #42515f;
   cursor: pointer;
   display: inline-block;
   font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -93,6 +94,7 @@
   z-index: 9;
   border: 0;
   transition: box-shadow .2s;
+  font-weight: bolder;
 }
 .button-42:hover{
   box-shadow: #008cff(151, 27, 11, 0.637) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;

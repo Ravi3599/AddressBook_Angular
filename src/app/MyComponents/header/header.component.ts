@@ -12,12 +12,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  //Navigates to info components
   onInfo(){
     this.router.navigate(["info"]);
   }
+  //Navigates to dashboard component
   onDashboard(){
     this.router.navigate(["dashboard"]);
   }
+  //Navigates to form component
   onForm(){
     this.router.navigate(["form"]);
   }

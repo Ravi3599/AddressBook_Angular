@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
     background-color:ghostwhite;
     padding: 100px;
 }
@@ -16,7 +15,7 @@
 .sub-container{
     font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     font-weight: 500;
-    background-color: rgb(221, 186, 151);
+    background-color: lightyellow;
     padding: 80px;
     width: 600px;
     border-radius: 100%;
@@ -26,9 +25,9 @@
     text-align: center;
 }
 .button-62 {
-    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    background: linear-gradient(to bottom right, #008cff, #42515f);
     border: 0;
-    border-radius: 20px;
+    border-radius: 5px;
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;

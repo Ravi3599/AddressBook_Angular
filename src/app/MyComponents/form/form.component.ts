@@ -19,23 +19,18 @@ export class FormComponent implements OnInit {
   stateHasError=true;
   addressbook:AddressBook = new AddressBook('','','','','','',0,0);
 
+  //When component gets initialized this hook gets called and retrieved record for given Id
   ngOnInit(): void {
     this._service.getAddressBookById(this.Id).subscribe((getData:any)=>{
       console.log(getData.data);
       this.addressbook=getData.data;
-      this.addressbook.firstName=getData.data.firstName;
-      this.addressbook.lastName=getData.data.lastName;
-      this.addressbook.email=getData.data.email;
-      this.addressbook.address=getData.data.address;
-      this.addressbook.city=getData.data.city;
-      this.addressbook.state=getData.data.state;
-      this.addressbook.zip=getData.data.zip;
-      this.addressbook.phoneNumber=getData.data.phoneNumber;
     })
   }
+  //Navigates to dashboard component
   onDashboard(){
       this.router.navigate(["dashboard"]);
   }
+  //custom validation for city
   validateCity(value:any){
     if(value=='default'){
       this.cityHasError=true;
@@ -44,6 +39,7 @@ export class FormComponent implements OnInit {
       this.cityHasError=false;
     }
   }
+  //custom validation for state
   validateState(value:any){
     if(value=='default'){
       this.stateHasError=true;
@@ -52,11 +48,13 @@ export class FormComponent implements OnInit {
       this.stateHasError=false;
     }
   }
+  //Ability to save address book record to database
   onAddContact(){
     this.submitted=true;
     console.log(this.addressbook);
     this._service.insertAddressBook(this.addressbook).subscribe(data=>console.log("Data Saved"));
   }
+  //Ability to update existing address book record 
   onUpdateContact(){
     this.submitted=true;
     this._service.updateAddressBookById(this.Id,this.addressbook).subscribe(data=>{console.log("Data Updated !")});
